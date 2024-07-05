@@ -1,0 +1,455 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+header, section, footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #333;
+    color: #fff;
+}
+
+section {
+    margin: 20px 0;
+}
+
+#skills ul, #tools ul, #certifications ul, #achievements ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+#skills li, #tools li, #certifications li, #achievements li {
+    margin-bottom: 10px;
+}
+
+.experience, .project {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add these styles for the timeline */
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.timeline-content h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.timeline-content p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+/* Add these styles for the skill cards with image icons */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.skill-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Add these styles for the tools cards */
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tools-category {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tools-category:hover {
+    transform: translateY(-5px);
+}
+
+.tools-category h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tool-card {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-symbol {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Add these styles for the work experience cards */
+
+.experience {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.experience-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header {
+    margin-bottom: 10px;
+}
+
+.experience-header h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experience-header p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.experience-details h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.experience-details p {
+    color: #666;
+}
+
+/* Add these styles for the aesthetic project cards */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-content {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-header {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.project-header h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.project-header p {
+    color: #fff;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.project-details {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .project-details {
+    opacity: 1;
+}
+
+.project-details p {
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Add these styles for the attractive certification cards */
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.certification-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+}
+
+.certification-content {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.certification-header {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.certification-header h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.certification-header p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.certification-details {
+    text-align: left;
+    padding-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.certification-card:hover .certification-details {
+    opacity: 1;
+}
+
+.certification-details p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Add these styles for the animated achievement cards */
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.achievement-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-header {
+    padding: 20px;
+}
+
+.achievement-header h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.achievement-header p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Add these styles for the contact section */
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #ddd;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+.contact-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-item p a {
+    color: #666;
+    text-decoration: none;
+}
+
+.contact-item p a:hover {
+    text-decoration: underline;
+}
